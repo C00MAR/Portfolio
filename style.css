@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* GÉNÉRAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 400;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    animation: fill 0.5s ease forwards 3.5s;
+}
+
+/* PORTFOLIO & ANIMATION */
+
+#textsvg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fill 0.5s ease forwards 3.5s;
+}
+#textsvg path:nth-child(1) {
+    stroke-dasharray: 434;
+    stroke-dasharray: 434;
+    animation: line 2s ease forwards;
+}
+#textsvg path:nth-child(2) {
+    stroke-dasharray: 546;
+    stroke-dasharray: 546;
+    animation: line 2s ease forwards 0.2s;
+}
+#textsvg path:nth-child(3) {
+    stroke-dasharray: 530;
+    stroke-dasharray: 530;
+    animation: line 2s ease forwards 0.4s;
+}
+#textsvg path:nth-child(4) {
+    stroke-dasharray: 324;
+    stroke-dasharray: 324;
+    animation: line 2s ease forwards 0.6s;
+}
+#textsvg path:nth-child(5) {
+    stroke-dasharray: 371;
+    stroke-dasharray: 371;
+    animation: line 2s ease forwards 0.8s;
+}
+#textsvg path:nth-child(6) {
+    stroke-dasharray: 546;
+    stroke-dasharray: 546;
+    animation: line 2s ease forwards 1s;
+}
+#textsvg path:nth-child(7) {
+    stroke-dasharray: 286;
+    stroke-dasharray: 286;
+    animation: line 2s ease forwards 1.2s;
+}
+#textsvg path:nth-child(8) {
+    stroke-dasharray: 219;
+    stroke-dasharray: 219;
+    animation: line 2s ease forwards 1.4s;
+}
+#textsvg path:nth-child(9) {
+    stroke-dasharray: 546;
+    stroke-dasharray: 546;
+    animation: line 2s ease forwards 1.6s;
+}
+@keyframes line {
+    0% {
+        stroke-dashoffset: 450;
+    }
+    90%{
+        stroke: black;
+    }
+    99% {
+        stroke-dashoffset: 0;
+        stroke: white;
+        fill: black;
+    }
+    100% {
+        stroke: white;
+        fill: white;
+    }
+}
+@keyframes fill {
+    0% {
+        fill: transparent;
+    }
+    35% {
+        fill: white;
+    }
+    100% {
+        fill: white;
+        background-color: black;
+    }
+}
