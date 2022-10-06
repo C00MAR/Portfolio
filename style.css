@@ -10,12 +10,25 @@
     font-size: 20px;
     font-weight: 400;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     width: 100%;
     height: 100vh;
     background-color: white;
     animation: fill 0.5s ease forwards 3.5s;
+    z-index: -10;
+    color: white;
+}
+header{
+    height: 100vh;
+}
+section{
+    height: 100vh;
+}
+::-webkit-scrollbar{
+    width: 0px;
 }
 
 /* PORTFOLIO & ANIMATION */
@@ -26,6 +39,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     animation: fill 0.5s ease forwards 3.5s;
+    width: 80%;
 }
 #textsvg path:nth-child(1) {
     stroke-dasharray: 434;
@@ -73,9 +87,13 @@ body{
     animation: line 2s ease forwards 1.6s;
 }
 .blur{
-    filter: blur(8px);
+    filter: blur(3px);
     transition: 1s all ease-in-out;
 }
+/* body > *:not(header) {
+    filter: blur(8px);
+    transition: 1s all ease-in-out;
+} */
 @keyframes line {
     0% {
         stroke-dashoffset: 450;
@@ -111,8 +129,9 @@ body{
 .btn-nav {
     position: fixed; 
     right: 0; 
-    width: 100vw; 
-    height: 100vh; 
+    width: 100vw;
+    height: 20vh; 
+    z-index: 10;
     -webkit-tap-highlight-color: transparent; 
     outline: none;
     display: flex;
@@ -123,7 +142,7 @@ body{
     width: 2.1em;
     height: 2.1em;
     top: 49vh;
-    right: 7%;
+    right: 3%;
     cursor: pointer;
     transition: 2s all ease-in-out;
     z-index: 10;
@@ -143,7 +162,7 @@ body{
 }
 .picto .line:nth-child(2){ 
     top: 10%;
-    right: -250px;
+    right: -225px;
     width: 500%;
     background-color: #ffffff;
     transition: 1s all ease-in-out;
@@ -160,6 +179,7 @@ body{
 .close-btn{
     right: 90%;
     transition: 2s all ease-in-out;
+    z-index: 1;
 }
 .close-btn .line:nth-child(1){
     top: 20%;
@@ -194,7 +214,8 @@ body{
     transform: translateX(1500px);
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
-    z-index: 10;
+    z-index: 2;
+    transition: 2s all ease-in-out;
 }
 .open-menu{
     transform: translateX(0px);
@@ -221,4 +242,95 @@ body{
     background-color: #000;
     color: white;
     transition: 0.2s all;
+}
+.arrow{
+    position: absolute;
+    bottom: 5vh;
+    left: 47vw;
+    border-radius: 50px;
+    border: #ffffff 3px solid;
+    height: 50px;
+    width: 50px;
+    animation: arrowflow 1s infinite alternate;
+    cursor: pointer;
+}
+.arrow a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.ri-arrow-down-s-line{
+    color: white;
+    font-size: 40px;
+    display: block;
+    align-items: center;
+    margin-top: 3px;
+    justify-content: center;
+    margin-left: 2px;
+}
+@keyframes arrowflow {
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+/* SECTION ONE */
+
+.one{
+    background-color: rgb(0, 0, 0);
+}
+.project1{
+    height: 65vh;
+    position: relative;
+    top: 10vh;
+    left: 5vw;
+}
+.titleproject{
+    font-size: 75px;
+    position: relative;
+    z-index: 1;
+    left: 6vw;
+    top: 3vh;
+    letter-spacing: 5px;
+    font-weight: 800;
+    width: 15vw;
+}
+.descproject{
+    font-size: 25px;
+    position: relative;
+    z-index: 2;
+    left: 8vw;
+    top: 2vh;
+    width: 50vw;
+    font-weight: 200;
+}
+
+/* SECTION TWO */
+
+.two{
+    background-color: rgb(0, 0, 0);
+}
+.project2{
+    height: 65vh;
+    position: relative;
+    top: 10vh;
+    right: -25vw;
+}
+.titleproject2{
+    font-size: 75px;
+    position: relative;
+    z-index: 1;
+    left: 59vw;
+    top: 3vh;
+    letter-spacing: 5px;
+    font-weight: 800;
+    width: 15vw;
+}
+.descproject2{
+    font-size: 25px;
+    position: relative;
+    z-index: 2;
+    left: 41vw;
+    top: 2vh;
+    width: 50vw;
+    font-weight: 200;
 }
