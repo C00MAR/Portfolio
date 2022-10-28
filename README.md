@@ -1,15 +1,21 @@
-Ce Portfolio FrontEnd est un projet qui débute le 27/09. <br>
-Il est a rendre pour le 6 novembre avec :<br>
-  - Majeure (65% de la note)<br>
-    ¤ Usage de technologies de basilage et de feuille de style<br>
-    ¤ Est autorisé :<br>
-      °   L'usage de framework CSS (type bootstrap, tailwind ...)<br>
-      °   L'usage de librairies JS et CSS<br>
-    ¤ Code Documenté et mis en forme selon les bonnes pratiques HTML et CSS (W3C)<br>
-    ¤ Versionné via git, poussé sur Github (repo poublique)<br>
-    ¤ Mise en ligne<br>
+# Launch the Portfolio locally:
+- Download from the repo the files in zip.
+- Simply unzip and launch the index.html file in your browser
+- Please ensure that the files are all in the same folder and are not moved or deleted
+
+
+## This FrontEnd Portfolio is a project that starts on 09/27. <br>
+### It is due November 6 with:<br>
+  - Major (65% of the grade)<br>
+    ¤ Use of basilization and stylesheet technologies<br>
+    ¤ Is allowed:<br>
+      ° The use of CSS framework (bootstrap type, tailwind ...)<br>
+      ° The use of JS and CSS libraries<br>
+    ¤ Code documented and formatted according to good HTML and CSS practices (W3C)<br>
+    ¤ Versioned via git, pushed to Github (public repo)<br>
+    ¤ Upload<br>
     ¤ Responsive<br>
-  - Mineur (35% de la note)<br>
-    ¤ Eco-conception et accéssibilité (RGAA / WCAG)<br>
-      ET / OU<br>
-    ¤ SEO et Rich Snippets<br>
+  - Minor (35% of the grade)<br>
+    ¤ Eco-design and accessibility (RGAA / WCAG)<br>
+      AND / OR<br>
+    ¤ SEO and Rich Snippets<br>
