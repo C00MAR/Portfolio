@@ -1,3 +1,5 @@
+/* ===== Scroll Manager ===== */
+
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};
@@ -17,7 +19,7 @@ function preventDefaultForScrollKeys(e) {
 var supportsPassive = false;
 try {
     window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; } 
+    get: function () { supportsPassive = true; console.log(supportsPassive)} 
     }));
 } catch(e) {}
 
@@ -48,11 +50,15 @@ function enableScroll() {
 // }
 // starttime()
 
+/* ===== NAVIGATION TOGGLER ===== */
+
 $(".picto").on("click", function(){
     $(".picto").toggleClass("close-btn");
     $(".nav ").toggleClass("open-menu");
     $("#textsvg").toggleClass("blur");
 });
+
+/* ===== DETAIL PROJECT TOGGLER ===== */
 
 $(".Hometimisation-img").on("click", function(){
     $(".overview").addClass("detailproject");
@@ -91,10 +97,11 @@ $(".pictoproject").on("click", function(){
     enableScroll()
 });
 
+/* ===== ANIMATION SVG CONTROLER ===== */
+
 var text = document.getElementById('textmarc');
 var newDom = '';
 var animationDelay = 75;
-let timeoutID;
 function setOutput() {
     for(let i = 0; i < text.innerText.length; i++)
     {
@@ -111,8 +118,8 @@ function setOutput() {
         text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
     }
 }
+let timeoutID;
 function delayed() {
     timeoutID = setTimeout(setOutput, 3500, '');
 }
 delayed()
-
