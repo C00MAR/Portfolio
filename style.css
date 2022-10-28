@@ -34,7 +34,7 @@ header{
     height: 2em;
     right: 3%;
     cursor: pointer;
-    transition: 2s all ease-in-out;
+    transition: 1s all cubic-bezier(0.68, -0.55, 0.27, 1.55) 1s;
     z-index: 1000;
 }
 .close-btn-project .line-close-project{
@@ -81,46 +81,37 @@ header{
 }
 #textsvg path:nth-child(1) {
     stroke-dasharray: 434;
-    stroke-dasharray: 434;
     animation: line 2s ease forwards;
 }
 #textsvg path:nth-child(2) {
-    stroke-dasharray: 546;
     stroke-dasharray: 546;
     animation: line 2s ease forwards 0.2s;
 }
 #textsvg path:nth-child(3) {
     stroke-dasharray: 530;
-    stroke-dasharray: 530;
     animation: line 2s ease forwards 0.4s;
 }
 #textsvg path:nth-child(4) {
-    stroke-dasharray: 324;
     stroke-dasharray: 324;
     animation: line 2s ease forwards 0.6s;
 }
 #textsvg path:nth-child(5) {
     stroke-dasharray: 371;
-    stroke-dasharray: 371;
     animation: line 2s ease forwards 0.8s;
 }
 #textsvg path:nth-child(6) {
-    stroke-dasharray: 546;
     stroke-dasharray: 546;
     animation: line 2s ease forwards 1s;
 }
 #textsvg path:nth-child(7) {
     stroke-dasharray: 286;
-    stroke-dasharray: 286;
     animation: line 2s ease forwards 1.2s;
 }
 #textsvg path:nth-child(8) {
     stroke-dasharray: 219;
-    stroke-dasharray: 219;
     animation: line 2s ease forwards 1.4s;
 }
 #textsvg path:nth-child(9) {
-    stroke-dasharray: 546;
     stroke-dasharray: 546;
     animation: line 2s ease forwards 1.6s;
 }
@@ -424,7 +415,7 @@ section{
     position: relative;
     top: 10vh;
     left: 10vw;
-    transition: 1s all ease-in-out;
+    transition: 1s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 #Hometimisation-title{
     left: 6vw;
@@ -446,17 +437,42 @@ section{
     height: 65vh;
     position: relative;
     top: 10vh;
-    right: -20vw;
+    left: 25vw;
+    transition: 1s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 #InMessage-title{
     left: 50vw;
     width: 40vw;
     text-align: right;
+    background-color: #000;
 }
 #InMessage-desc{
-    left: 50vw;
+    left: 45vw;
     width: 40vw;
     text-align: right;
+}
+
+/* SECTION THREE */
+
+.close-project3{
+    top: 305%;
+}
+.Nexus-img{
+    height: 65vh;
+    position: relative;
+    top: 10vh;
+    left: 10vw;
+    transition: 1s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+#Nexus-title{
+    left: 6vw;
+    width: 15vw;
+    text-align: left;
+}
+#Nexus-desc{
+    left: 8vw;
+    width: 50vw;
+    text-align: left;
 }
 
 /* SECTION DETAIL */
@@ -467,14 +483,14 @@ section{
     position: relative;
     display: flex;
     flex-direction: row;
-    transition: 1s all ease-in-out;
+    transition: 1s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 .detailproject img{
     height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    transition: 1s all ease-in-out;
+    transition: 1s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 .detailproject .detailbox{
     background-color: rgba(205, 205, 205, 0.85);
@@ -492,13 +508,16 @@ section{
 .detailproject .titleproject{
     font-size: 65px;
     top: 10%;
-    left: 5%;
+    left: 5% !important;
     color: black;
+    background-color: transparent !important;
+    text-align: left !important;
 }
 .detailproject .descproject{
     font-size: 20px;
-    top: 10%;
-    left: 5%;
+    top: 10% !important;
+    left: 5% !important;
     width: 50%;
     color: black;
+    text-align: left !important;
 }

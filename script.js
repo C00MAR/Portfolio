@@ -69,7 +69,16 @@ $(".InMessage-img").on("click", function(){
     $(".pictoproject").addClass("close-project2")
     $(".line").addClass("hide")
     disableScroll()
-    scrollTo(0, 1440)
+    scrollTo(0, 1442)
+});
+
+$(".Nexus-img").on("click", function(){
+    $(".overview").addClass("detailproject");
+    $(".pictoproject").addClass("close-btn-project")
+    $(".pictoproject").addClass("close-project3")
+    $(".line").addClass("hide")
+    disableScroll()
+    scrollTo(0, 2163)
 });
 
 $(".pictoproject").on("click", function(){
@@ -77,6 +86,7 @@ $(".pictoproject").on("click", function(){
     $(".pictoproject").removeClass("close-btn-project")
     $(".pictoproject").removeClass("close-project1")
     $(".pictoproject").removeClass("close-project2")
+    $(".pictoproject").removeClass("close-project3")
     $(".line").removeClass("hide")
     enableScroll()
 });
