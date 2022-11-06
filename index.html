@@ -1,13 +1,50 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="MOUREAU Marc">
+	<meta name="description" content="Portfolio of Marc Moureau made during the year 2022 in 2 months. It shows the different projects I have done. With a part about and my contacts.">
+	<meta name="Keywords" content="portfolio, marc moureau, moureau marc, developper front end, developper full stack, bachelor iim, cdi, coding and digital inovation, freelance developer">
+    <meta property="og:title" content="Portfolio of Moureau Marc" />
+    <meta property="og:type" content="portfolio"/>
+    <meta property="og:url" content="https://portfolio-c00mar.vercel.app/" />
+    <meta property="og:image" content="https://portfolio-c00mar.vercel.app/img/sphere-icon.ico" />
+    <meta property="og:description" content="Portfolio of Marc Moureau made during the year 2022 in 2 months. It shows the different projects I have done. With a part about and my contacts." />
+    <meta property="og:locale" content="fr"/>
+    <meta property="og:site_name" content="Portfolio MOUREAU Marc"/>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>Portfolio Marc Moureau</title>
     <link rel="shortcut icon" href="img/sphere-icon.ico">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Person",
+            "name": "MOUREAU Marc",
+            "url": "https://portfolio-c00mar.vercel.app/",
+            "image": "https://portfolio-c00mar.vercel.app/img/sphere-icon.ico",
+            "jobTitle": "Developper Full Stack, Spé FrontEnd",
+            "email": "marc.moureau@edu.devinci.fr",
+            "birthDate": "2003-05-16",
+            "sameAs": [
+                "https://instagram.com/marc.moureau",
+                "https://www.linkedin.com/in/marc-moureau-215377222/",
+                "https://github.com/c00mar",
+                "https://portfolio-c00mar.vercel.app/",
+                "https://discordlookup.com/user/519218878321262592#2710"
+            ],
+            "knowsLanguage": [
+                "fr",
+                "en"
+            ],
+            "worksFor": {
+                "@type": "Organization",
+                "name": "IIM"
+            }  
+        }
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
 </head>
 <body>
@@ -45,10 +82,10 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li class="navelement"><a href="#">Project</a></li>
                     <li class="navelement"><a href="#" class="about-link">About</a></li>
-                    <li class="navelement"><a href="#">Expérience</a></li>
-                    <li class="navelement"><a href="#">Contact</a></li>
+                    <li class="navelement"><a href="#one">HomeTimisation</a></li>
+                    <li class="navelement"><a href="#two">InMessage</a></li>
+                    <li class="navelement"><a href="#three">Nexus</a></li>
                 </ul>
             </div>
         </div>
@@ -122,13 +159,13 @@
             <img src="img/hometimisation.png" alt="" class="Hometimisation-img">
             <div class="detailbox">
                 <h2 class="titleproject" id="Hometimisation-title">HomeTimisation</h2>
-                <p class="descproject" id="Hometimisation-desc">HomeTimisation est un site fictif d'une entreprise de domotique</p>
+                <p class="descproject" id="Hometimisation-desc">HomeTimisation is a fictional site of a home automation company</p>
                 <svg width="148" height="148" viewBox="0 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg" class="github-icon">
                     <a href="https://github.com/C00MAR/Hometimisation" target="_blank">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M74 74L0 0V148H148L74 74ZM15 105C15 89.53 27.53 77 43 77C58.47 77 71 89.53 71 105C70.9983 110.867 69.157 116.585 65.7352 121.351C62.3134 126.116 57.4834 129.688 51.925 131.565C50.525 131.845 50 130.97 50 130.235C50 129.919 50.0039 129.372 50.0091 128.644C50.0195 127.195 50.035 125.028 50.035 122.535C50.035 119.91 49.16 118.23 48.145 117.355C54.375 116.655 60.92 114.275 60.92 103.53C60.92 100.45 59.835 97.965 58.05 96.005C58.33 95.305 59.31 92.435 57.77 88.585C57.77 88.585 55.425 87.815 50.07 91.455C47.83 90.825 45.45 90.51 43.07 90.51C40.69 90.51 38.31 90.825 36.07 91.455C30.715 87.85 28.37 88.585 28.37 88.585C26.83 92.435 27.81 95.305 28.09 96.005C26.305 97.965 25.22 100.485 25.22 103.53C25.22 114.24 31.73 116.655 37.96 117.355C37.155 118.055 36.42 119.28 36.175 121.1C34.565 121.835 30.54 123.025 28.02 118.79C27.495 117.95 25.92 115.885 23.715 115.92C21.37 115.955 22.77 117.25 23.75 117.775C24.94 118.44 26.305 120.925 26.62 121.73C27.18 123.305 29 126.315 36.035 125.02C36.035 126.55 36.0499 128.021 36.0603 129.043C36.0658 129.587 36.07 130.004 36.07 130.235C36.07 130.97 35.545 131.81 34.145 131.565C23.015 127.855 15 117.39 15 105Z" fill="black"/>
                     </a>
                 </svg> 
-                <a href="http://www.hometimisation.tk/" target="_blank" class="visit" id="visithere_1">Visiter_Le_Site</a>
+                <a href="http://www.hometimisation.tk/" target="_blank" class="visit" id="visithere_1">Visit_The_Site</a>
             </div>
         </div>
     </section>
@@ -142,13 +179,13 @@
             <img src="img/inmessage.png" alt="" class="InMessage-img">
             <div class="detailbox">
                 <h2 class="titleproject" id="InMessage-title">InMessage</h2>
-                <p class="descproject" id="InMessage-desc">InMessage est un site fictif d'une entreprise de messagerie ficitive</p>
+                <p class="descproject" id="InMessage-desc">InMessage is a fictional website of a messaging company</p>
                 <svg width="148" height="148" viewBox="0 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg" class="github-icon">
                     <a href="https://github.com/C00MAR/InMessage" target="_blank">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M74 74L0 0V148H148L74 74ZM15 105C15 89.53 27.53 77 43 77C58.47 77 71 89.53 71 105C70.9983 110.867 69.157 116.585 65.7352 121.351C62.3134 126.116 57.4834 129.688 51.925 131.565C50.525 131.845 50 130.97 50 130.235C50 129.919 50.0039 129.372 50.0091 128.644C50.0195 127.195 50.035 125.028 50.035 122.535C50.035 119.91 49.16 118.23 48.145 117.355C54.375 116.655 60.92 114.275 60.92 103.53C60.92 100.45 59.835 97.965 58.05 96.005C58.33 95.305 59.31 92.435 57.77 88.585C57.77 88.585 55.425 87.815 50.07 91.455C47.83 90.825 45.45 90.51 43.07 90.51C40.69 90.51 38.31 90.825 36.07 91.455C30.715 87.85 28.37 88.585 28.37 88.585C26.83 92.435 27.81 95.305 28.09 96.005C26.305 97.965 25.22 100.485 25.22 103.53C25.22 114.24 31.73 116.655 37.96 117.355C37.155 118.055 36.42 119.28 36.175 121.1C34.565 121.835 30.54 123.025 28.02 118.79C27.495 117.95 25.92 115.885 23.715 115.92C21.37 115.955 22.77 117.25 23.75 117.775C24.94 118.44 26.305 120.925 26.62 121.73C27.18 123.305 29 126.315 36.035 125.02C36.035 126.55 36.0499 128.021 36.0603 129.043C36.0658 129.587 36.07 130.004 36.07 130.235C36.07 130.97 35.545 131.81 34.145 131.565C23.015 127.855 15 117.39 15 105Z" fill="black"/>
                     </a>
                 </svg>  
-                <a href="https://in-message.vercel.app/" target="_blank" class="visit" id="visithere_2">Visiter_Le_Site</a>
+                <a href="https://in-message.vercel.app/" target="_blank" class="visit" id="visithere_2">Visit_The_Site</a>
             </div>
         </div>
     </section>
@@ -162,13 +199,13 @@
             <img src="img/nexus.png" alt="" class="Nexus-img">
             <div class="detailbox">
                 <h2 class="titleproject" id="Nexus-title">Nexus</h2>
-                <p class="descproject" id="Nexus-desc">C'est un site non officiel du bar le Nexus</p>
+                <p class="descproject" id="Nexus-desc">This is an unofficial website of the Nexus Bar</p>
                 <svg width="148" height="148" viewBox="0 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg" class="github-icon">
                     <a href="https://github.com/C00MAR/Nexus_-_MOUREAUMarc" target="_blank">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M74 74L0 0V148H148L74 74ZM15 105C15 89.53 27.53 77 43 77C58.47 77 71 89.53 71 105C70.9983 110.867 69.157 116.585 65.7352 121.351C62.3134 126.116 57.4834 129.688 51.925 131.565C50.525 131.845 50 130.97 50 130.235C50 129.919 50.0039 129.372 50.0091 128.644C50.0195 127.195 50.035 125.028 50.035 122.535C50.035 119.91 49.16 118.23 48.145 117.355C54.375 116.655 60.92 114.275 60.92 103.53C60.92 100.45 59.835 97.965 58.05 96.005C58.33 95.305 59.31 92.435 57.77 88.585C57.77 88.585 55.425 87.815 50.07 91.455C47.83 90.825 45.45 90.51 43.07 90.51C40.69 90.51 38.31 90.825 36.07 91.455C30.715 87.85 28.37 88.585 28.37 88.585C26.83 92.435 27.81 95.305 28.09 96.005C26.305 97.965 25.22 100.485 25.22 103.53C25.22 114.24 31.73 116.655 37.96 117.355C37.155 118.055 36.42 119.28 36.175 121.1C34.565 121.835 30.54 123.025 28.02 118.79C27.495 117.95 25.92 115.885 23.715 115.92C21.37 115.955 22.77 117.25 23.75 117.775C24.94 118.44 26.305 120.925 26.62 121.73C27.18 123.305 29 126.315 36.035 125.02C36.035 126.55 36.0499 128.021 36.0603 129.043C36.0658 129.587 36.07 130.004 36.07 130.235C36.07 130.97 35.545 131.81 34.145 131.565C23.015 127.855 15 117.39 15 105Z" fill="black"/>
                     </a>
                 </svg>                    
-                <a href="https://nexus-flax.vercel.app/" target="_blank" class="visit" id="visithere_3">Visiter_Le_Site</a>
+                <a href="https://nexus-flax.vercel.app/" target="_blank" class="visit" id="visithere_3">Visit_The_Site</a>
             </div>
         </div>
     </section>

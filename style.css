@@ -482,7 +482,7 @@ header{
     width: 8vw;
 }
 
-/* NAV BAR (not used)*/
+/* NAV BAR */
 
 .btn-nav {
     position: fixed; 
@@ -493,8 +493,8 @@ header{
     z-index: 30;
     -webkit-tap-highlight-color: transparent; 
     outline: none;
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     justify-content: flex-end;
 }
 .picto{
@@ -845,7 +845,7 @@ section{
 }
 .detailproject .visit{
     display: block;
-    bottom: 5%;
+    bottom: 10%;
     right: 10%;
     position: absolute;
     text-decoration: none;
@@ -943,6 +943,9 @@ section{
     .char{
         font-size: 1em;
     }
+    .btn-nav {
+        display: none;
+    }
     
         /* SECTION */
 
@@ -980,7 +983,7 @@ section{
     }
     .detailproject img{
         height: 50vh;
-        width: 200vh;
+        width: 170%;
         left: 0;
     }
     .detailproject .titleproject {
