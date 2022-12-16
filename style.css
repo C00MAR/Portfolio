@@ -254,7 +254,7 @@ header{
     z-index: 20;
     background-color: rgb(205, 205, 205);
     transition: 0.95s all ease-in-out 0.3s;
-    height: 250vh;
+    height: 260vh;
 }
 .open-about{
     transform: translateX(0vw);
@@ -300,6 +300,12 @@ header{
     margin-left: 25px;
     line-height: 1em;
     text-align: left;
+    transform: translateY(450px);
+    transition: 0.95s all cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;
+}
+.open-about .title-about{
+    transform: translateY(0px);
+    transition: 0.95s all cubic-bezier(0.68, -0.55, 0.27, 1.55)  1.1s;
 }
 .title-name{
     font-size: 4.5em;
@@ -311,15 +317,44 @@ header{
     width: 90%;
     text-align: right;
 }
+.title-name-anim {  
+    animation: right-enter 1.3s cubic-bezier(0.68, -0.55, 0.35, 1.35);
+}
+.right-time-anim{
+    animation: right-enter 1.3s ease-in-out;
+}
+@keyframes right-enter {
+	0% {
+		transform: translateX(100vw);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
 .detail-name{
     font-size: 2.8em;
     font-weight: 600;
     word-spacing: 10px;
     letter-spacing: -2px;
     top: 135vh;
-    left: 25px;
+    margin-left: 25px;
     width: 90%;
     text-align: left;
+    transform: translateX(00vw);
+}
+.detail-name-anim {
+    animation: left-enter 1.3s cubic-bezier(0.68, -0.55, 0.35, 1.35);
+}
+.left-time-anim{
+    animation: left-enter 1.3s ease-in-out;
+}
+@keyframes left-enter {
+	from {
+		transform: translateX(-100vw);
+	}
+	to {
+		transform: translateX(0px);
+	}
 }
 .project-timeline{
     position: absolute;
@@ -331,6 +366,36 @@ header{
     grid-template-rows: repeat(2, 30vh);
     align-items: center;
     justify-items: start;
+}
+.top-time-anim{
+    animation: top-enter 1.3s ease-in-out;
+}
+@keyframes top-enter {
+	from {
+		transform: translateY(-50vh);
+        opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+        opacity: 1;
+	}
+}
+.bottom-time-anim{
+    animation: bottom-enter 1.3s ease-in-out;
+    transform: translateY(-57px);
+}
+@keyframes bottom-enter {
+	from {
+		transform: translateY(50vh);
+        opacity: 0;
+	}
+	to {
+		transform: translateY(-57px);
+        opacity: 1;
+	}
+}
+.timeline-anim{
+    animation: left-enter 1.3s ease-in-out;
 }
 #bachelor{
     grid-column: 1;
@@ -375,14 +440,13 @@ header{
 }
 .backdrop-rectangle{
     background-color: black;
-    height: 25vh;
+    height: 22vh;
     width: 50px;
     position: absolute;
-    top: 37px;
 }
-.bottom-rect{
+/* .bottom-rect{
     top: 219px !important;
-}
+} */
 .where-time, .why-time, .years-time{
     margin-left: 55px;
     text-transform: uppercase;
@@ -405,6 +469,18 @@ header{
     font-style: oblique;
     text-align: right;
 }
+.contact{
+    position: absolute;
+    margin-top: 100px;
+    top: 220vh;
+    width: 80%;
+    left: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.icon{
+    width: 8vw;
+}
 
 /* NAV BAR */
 
@@ -418,6 +494,7 @@ header{
     -webkit-tap-highlight-color: transparent; 
     outline: none;
     display: flex;
+    /* display: none; */
     justify-content: flex-end;
 }
 .picto{
@@ -685,6 +762,29 @@ section{
     text-align: left;
 }
 
+/* SECTION FOUR */
+
+.close-project4{
+    top: 489%;
+}
+.BPS-img{
+    height: 65vh;
+    position: relative;
+    top: 10vh;
+    left: 25vw;
+    transition: 0.95s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+#BPS-title{
+    left: 50vw;
+    width: 40vw;
+    text-align: right;
+}
+#BPS-desc{
+    left: 45vw;
+    width: 40vw;
+    text-align: right;
+}
+
 /* SECTION DETAIL */
 
 .detailproject{
@@ -716,7 +816,7 @@ section{
 }
 .detailproject .titleproject{
     font-size: 65px;
-    top: 12%;
+    top: 10%;
     left: 5% !important;
     color: black;
     background-color: transparent !important;
@@ -726,7 +826,7 @@ section{
 }
 .detailproject .descproject{
     font-size: 20px;
-    top: 12% !important;
+    top: 10% !important;
     left: 5% !important;
     width: 50%;
     color: black;
@@ -736,7 +836,6 @@ section{
 }
 .detailproject .github-icon{
     display: block;
-    transform: scale(0);
     animation: githubscale 0.8s ease forwards 1.6s;
     transform-origin: bottom left;
 }
@@ -769,7 +868,7 @@ section{
 }
 .detailproject .visit{
     display: block;
-    bottom: 5%;
+    bottom: 10%;
     right: 10%;
     position: absolute;
     text-decoration: none;
@@ -789,11 +888,10 @@ section{
     font-size: 20px;
     font-weight: 800;
     margin: 0;
-    padding: 0;
     display: inline-block;
     position: relative;
     transition: transform cubic-bezier(0.77, 0, 0.175, 1) 250ms;
-    padding: 0px 0.1em;
+    padding: 0 0.1em;
 }
 .detailproject .visit span:nth-child(0n) {
     transition-delay: 0ms;
@@ -837,4 +935,192 @@ section{
 }
 .detailproject .visit:hover span:after {
     transform: scaleY(1);
+}
+
+/* RESPONSIVE */
+
+@media screen and
+(max-width: 600px){
+
+    html, body {
+        overflow-x: hidden;
+    }
+    body {
+        position: relative
+    }
+        /* PORTFOLIO & ANIMATION */
+    
+    .linename{
+        display: none;
+    }
+    .marc{
+        top: 55%;
+        width: 38vw;
+    }
+    .arrow{
+        left: 35vw;
+    }
+    #textmarc{
+        margin-left: 50%;
+    }
+    .char{
+        font-size: 1em;
+    }
+    .btn-nav {
+        display: none;
+    }
+    
+        /* SECTION */
+
+    section{
+        margin-bottom: 0px;
+    }
+    .titleproject{
+        font-size: 1.5em;
+        top: 7vh !important;
+        left: 10vw !important;
+        width: 60vw !important;
+        text-align: left !important;
+        margin-top: 40px;
+    }
+    .descproject{
+        font-size: 1em;        
+        top: 7vh;
+        left: 15vw !important;
+        width: 80vw !important;
+        text-align: left !important;
+    }
+    .overview img{
+        width: 90vw;
+        height: 0%;
+        left: 5%;
+    }
+
+        /* SECTION DETAIL */
+
+    .detailproject .detailbox{
+        height: 40vh;
+        width: 100vw;
+        top: 60%;
+        left: 0;
+    }
+    .detailproject img{
+        height: 50vh;
+        width: 170%;
+        left: 0;
+    }
+    .detailproject .titleproject {
+        font-size: 1.6em;
+        top: 12% !important;
+        animation: left-enter 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        transform: translateY(0);
+        margin-top: 0px;
+    }
+    .detailproject .descproject{
+        width: 83vw !important;
+        animation: left-enter 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.25s;
+        transform: translateY(0);
+    }
+    @keyframes githubscale {
+        100% {
+            transform: scale(0.7);
+        }
+    }
+    .detailproject .visit span {
+        font-size: 16px;
+    }
+    .close-project1{
+        top: 150%;
+    }
+    .close-project2{
+        top: 250%;
+    }
+    .close-project3{
+        top: 350%;
+    }
+    .close-btn-project {
+        background-color: rgb(0, 0, 0);
+        width: 100vw;
+        height: 10vh;
+        right: 0;
+        transition: 1s all cubic-bezier(0.68, -0.55, 0.27, 1.55) 1s;
+    }
+    .close-btn-project::before{
+        content: "close";
+        text-transform: uppercase;
+        color: white;
+        position: absolute;
+        left: 40%;
+        top: 30%;
+        transform-origin: center;
+    }
+    .close-btn-project .line-close-project {
+        height: 0 !important;
+        width: 0 !important;
+    }
+
+        /* SECTION ABOUT */
+
+    .title-about {
+        font-size: 2em;
+        letter-spacing: -2px;
+        word-spacing: 10px;
+        width: 90vw;
+        margin-left: 10px;
+    }
+    .title-name {
+        font-size: 2em;
+        letter-spacing: -2px;
+        word-spacing: 10px;
+        margin-top: -35px;
+    }
+    .detail-name {
+        font-size: 1.4em;
+        margin-left: 10px;
+        letter-spacing: -2px;
+        word-spacing: 10px;
+        margin-top: -60px;
+    }
+    .project-timeline {
+        grid-template-columns: repeat(2, 45vw);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    #mastere {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #bachelor{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #alternance{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .backdrop-rectangle {
+        height: 5vh;
+        width: 170px;
+    }
+    .timeline-line {
+        top: 210vh;
+        width: 140vw;
+        left: -20%;
+        height: 0vh;
+        rotate: 90deg;
+    }
+    .where-time {
+        font-size: 1em;
+        margin-top: 40px;
+    }
+    .why-time {
+        font-size: 0.5em;
+        text-align: center;
+    }
+    .years-time {
+        font-size: 0.7em;
+        text-align: center;
+    }
+    .where-time, .why-time, .years-time {
+        margin-left: 10px;
+    }
 }

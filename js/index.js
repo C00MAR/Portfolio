@@ -42,13 +42,13 @@ function enableScroll() {
     window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
 
-// let startID
-// disableScroll()
-// function starttime() {
-//     scrollTo(0, 0)
-//     startID = setTimeout(enableScroll, 5000, '');
-// }
-// starttime()
+let startID
+disableScroll()
+function starttime() {
+    startID = setTimeout(enableScroll, 5250, '');
+}
+scrollTo(0, 0)
+starttime()
 
 /* ===== NAVIGATION TOGGLER ===== */
 
@@ -68,8 +68,10 @@ $("#about").on("click", function(){
     $(".one").addClass("section-hide")
     $(".two").addClass("section-hide")
     $(".three").addClass("section-hide")
-    // disableScroll()
+    $(".four").addClass("section-hide")
+    disableScroll()
     scrollTo(0, 0)
+    setTimeout(enableScroll, 1200, '');
 });
 
 $("#marc").on("click", function(){
@@ -80,6 +82,13 @@ $("#marc").on("click", function(){
     $(".one").removeClass("section-hide")
     $(".two").removeClass("section-hide")
     $(".three").removeClass("section-hide")
+    $(".four").removeClass("section-hide")
+    $(".title-name").removeClass("title-name-anim");
+    $(".detail-name").removeClass("detail-name-anim");
+    $("#bachelor").removeClass("top-time-anim")
+    $("#alternance").removeClass("bottom-time-anim")
+    $("#mastere").removeClass("top-time-anim")
+    $(".timeline-line").removeClass("timeline-anim")
     scrollTo(0, 0)
 });
 
@@ -91,6 +100,68 @@ $("#marc").on("click", function(){
 //     $("#textsvg").toggleClass("blur");
 // });
 
+
+/* ===== ABOUT ANIM ===== */
+
+if (window.matchMedia("(max-width: 600px)").matches) {
+    $(".backdrop-rectangle").removeClass("bottom-rect"); 
+}   
+
+$(".title-name").removeClass("title-name-anim");
+$(".detail-name").removeClass("detail-name-anim");
+$(".time").removeClass("top-time-anim");
+$(".time").removeClass("bottom-time-anim");
+$(".timeline-line").removeClass("timeline-anim");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            $(".title-name").addClass("title-name-anim")
+        return; 
+        }
+    });
+});
+observer.observe(document.querySelector('.title-name'));
+
+const observerdetail = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            $(".detail-name").addClass("detail-name-anim")
+        return; 
+        }
+    });
+});
+observerdetail.observe(document.querySelector('.detail-name'));
+
+const observertime = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (window.matchMedia("(max-width: 600px)").matches) {
+            if (entry.isIntersecting) {
+                $("#bachelor").addClass("left-time-anim")
+                $("#alternance").addClass("right-time-anim")
+                $("#mastere").addClass("left-time-anim")
+                $(".timeline-line").addClass("timeline-anim")
+            return; 
+            }      
+        } else {
+            if (entry.isIntersecting) {
+                $("#bachelor").addClass("top-time-anim")
+                $("#alternance").addClass("bottom-time-anim")
+                $("#mastere").addClass("top-time-anim")
+                $(".timeline-line").addClass("timeline-anim")
+            return; 
+            }
+        }
+    });
+});
+observertime.observe(document.querySelector('.timeline-line'));
+
+/* ----DISCORD---- */
+
+$("#discord").on("click", function(){
+    navigator.clipboard.writeText('Coomar#2710');
+});
+
 /* ===== DETAIL PROJECT TOGGLER ===== */
 
 $(".Hometimisation-img").on("click", function(){
@@ -99,7 +170,7 @@ $(".Hometimisation-img").on("click", function(){
     $(".pictoproject").addClass("close-project1")
     $(".line").addClass("hide")
     disableScroll()
-    scrollTo(0, 721)
+    document.getElementById('one').scrollIntoView();
 });
 
 $(".InMessage-img").on("click", function(){
@@ -108,7 +179,7 @@ $(".InMessage-img").on("click", function(){
     $(".pictoproject").addClass("close-project2")
     $(".line").addClass("hide")
     disableScroll()
-    scrollTo(0, 1643)
+    document.getElementById('two').scrollIntoView();
 });
 
 $(".Nexus-img").on("click", function(){
@@ -117,7 +188,16 @@ $(".Nexus-img").on("click", function(){
     $(".pictoproject").addClass("close-project3")
     $(".line").addClass("hide")
     disableScroll()
-    scrollTo(0, 2565)
+    document.getElementById('three').scrollIntoView();
+});
+
+$(".BPS-img").on("click", function(){
+    $(".overview").addClass("detailproject");
+    $(".pictoproject").addClass("close-btn-project")
+    $(".pictoproject").addClass("close-project4")
+    $(".line").addClass("hide")
+    disableScroll()
+    document.getElementById('four').scrollIntoView();
 });
 
 $(".pictoproject").on("click", function(){
@@ -126,6 +206,7 @@ $(".pictoproject").on("click", function(){
     $(".pictoproject").removeClass("close-project1")
     $(".pictoproject").removeClass("close-project2")
     $(".pictoproject").removeClass("close-project3")
+    $(".pictoproject").removeClass("close-project4")
     $(".line").removeClass("hide")
     enableScroll()
 });
@@ -151,9 +232,8 @@ function Name() {
         text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
     }
 }
-var timeoutID;
 function delayed() {
-    timeoutID = setTimeout(Name, 3500, '');
+    setTimeout(Name, 3500, '');
 }
 delayed()
 
@@ -162,18 +242,22 @@ delayed()
 var textspan1 = document.getElementById('visithere_1');
 var textspan2 = document.getElementById('visithere_2');
 var textspan3 = document.getElementById('visithere_3');
+var textspan4 = document.getElementById('visithere_4');
 var newTag1 = '';
 var newTag2 = '';
 var newTag3 = '';
+var newTag4 = '';
 function visithere() {
     for(let j = 0; j < textspan1.innerText.length; j++)
     {
         newTag1 += '<span class="letter">' + (textspan1.innerText[j] == ' ' ? '&nbsp;' : textspan1.innerText[j])+ '</span>';
         newTag2 += '<span class="letter">' + (textspan2.innerText[j] == ' ' ? '&nbsp;' : textspan2.innerText[j])+ '</span>';
         newTag3 += '<span class="letter">' + (textspan3.innerText[j] == ' ' ? '&nbsp;' : textspan3.innerText[j])+ '</span>';
+        newTag4 += '<span class="letter">' + (textspan4.innerText[j] == ' ' ? '&nbsp;' : textspan4.innerText[j])+ '</span>';
     }
     textspan1.innerHTML = newTag1;
     textspan2.innerHTML = newTag2;
     textspan3.innerHTML = newTag3;
+    textspan4.innerHTML = newTag4;
 }
 visithere()
