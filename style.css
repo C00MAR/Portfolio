@@ -318,11 +318,7 @@ header{
     text-align: right;
 }
 .title-name-anim {  
-<<<<<<< HEAD
     animation: right-enter 1.3s cubic-bezier(0.68, -0.55, 0.35, 1.35);
-=======
-    animation: right-enter 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
->>>>>>> main
 }
 .right-time-anim{
     animation: right-enter 1.3s ease-in-out;
@@ -347,11 +343,7 @@ header{
     transform: translateX(00vw);
 }
 .detail-name-anim {
-<<<<<<< HEAD
     animation: left-enter 1.3s cubic-bezier(0.68, -0.55, 0.35, 1.35);
-=======
-    animation: left-enter 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
->>>>>>> main
 }
 .left-time-anim{
     animation: left-enter 1.3s ease-in-out;

@@ -68,10 +68,7 @@ $("#about").on("click", function(){
     $(".one").addClass("section-hide")
     $(".two").addClass("section-hide")
     $(".three").addClass("section-hide")
-<<<<<<< HEAD
     $(".four").addClass("section-hide")
-=======
->>>>>>> main
     disableScroll()
     scrollTo(0, 0)
     setTimeout(enableScroll, 1200, '');
@@ -85,10 +82,7 @@ $("#marc").on("click", function(){
     $(".one").removeClass("section-hide")
     $(".two").removeClass("section-hide")
     $(".three").removeClass("section-hide")
-<<<<<<< HEAD
     $(".four").removeClass("section-hide")
-=======
->>>>>>> main
     $(".title-name").removeClass("title-name-anim");
     $(".detail-name").removeClass("detail-name-anim");
     $("#bachelor").removeClass("top-time-anim")
@@ -195,7 +189,6 @@ $(".Nexus-img").on("click", function(){
     $(".line").addClass("hide")
     disableScroll()
     document.getElementById('three').scrollIntoView();
-<<<<<<< HEAD
 });
 
 $(".BPS-img").on("click", function(){
@@ -205,8 +198,6 @@ $(".BPS-img").on("click", function(){
     $(".line").addClass("hide")
     disableScroll()
     document.getElementById('four').scrollIntoView();
-=======
->>>>>>> main
 });
 
 $(".pictoproject").on("click", function(){
